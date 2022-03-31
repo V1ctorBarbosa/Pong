@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 200;
+    --saturation: 100%;
+    --foreground-color: hsl(var(--hue), var(--saturation), 90%);
+    --background-color: hsl(var(--hue), var(--saturation), 10%);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+/*** Paddle ***/
+
+.paddle {
+    --position: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    width: 1vh;
+    height: 15vh;
+    top: calc(var(--position) * 1vh);
+    transform: translateY(-50%);
+}
+
+.paddle.left {
+    left: 1vw;
+}
+
+.paddle.right {
+    right: 1vw;
+}
+
+/*** Ball ***/
+
+.ball {
+    --x: 50;
+    --y: 50;
+
+    position: absolute;
+    background-color: var(--foreground-color);
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translateY(-50%, -50%);
+}
+
+/*** X ***/
+
+#versus {
+    font-size: 10vh;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    transform: translate(1.5%, 70%);
+}
+
+/*** Score ***/
+
+.score {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 85vh;
+    color: var(--foreground-color);
+}
+
+.score > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    opacity: .1;
+}
