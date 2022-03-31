@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module" defer></script>
   <title>Pong</title>
 </head>
+
 <body>
   <div class="score">
     <div id="player-score">0</div>
-    <div id="versus">x</div>
+    <div class="signs">
+      <div class="text">to play with sound, click once :)</div>
+      <div class="versus">x</div>
+    </div>
     <div id="computer-score">0</div>
   </div>
   <div class="ball" id="ball"></div>
@@ -21,5 +26,8 @@
   <audio id="tap" src="sound/tap.mp3"></audio>
   <audio id="lost" src="sound/lost.mp3"></audio>
   <audio id="win" src="sound/win.mp3"></audio>
+
+  <script src="script.js" type="module" defer></script>
 </body>
+
 </html>

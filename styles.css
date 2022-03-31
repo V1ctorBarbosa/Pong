@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -54,13 +56,20 @@ body {
     transform: translateY(-50%, -50%);
 }
 
-/*** X ***/
+/*** Signs ***/
 
-#versus {
-    font-size: 10vh;
-    left: calc(var(--x) * 1vw);
-    top: calc(var(--y) * 1vh);
-    transform: translate(1.5%, 70%);
+.signs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text {
+    font-size: 2rem;
+}
+
+.versus {
+    font-size: 5rem;
 }
 
 /*** Score ***/
@@ -73,7 +82,7 @@ body {
     color: var(--foreground-color);
 }
 
-.score > * {
+.score>* {
     flex-grow: 1;
     flex-basis: 0;
     padding: 0 2vh;
