@@ -8,7 +8,8 @@ Pong game made with javascript.
 
 * HTML5
 * CSS3
-* Flexbox
+* Javascript
+* Modules
 
 ### 📋 Prerequisites
 
